@@ -9,4 +9,6 @@ from .schema import schema
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('gql/', GraphQLView.as_view(graphiql=True)),
+    path('auth/', include('rest_framework.urls')),
+    path('rapi/', include('api.rest.urls')),
 ]
